@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Webmail System</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body onload = "showInbox()">
+  	<div id = "h" >
+  		<h1>A Simple Webmail System</h1>
+  	</div>
+    <div id="f">
+            <div id = "composing">
+              <button onclick = "compose()">Compose</button>
+            </div>
+            <div class = "dropdown">
+              <button onclick = "moveTo()" class = "dropbtn" id = "moving">Move to ...</button>
+              <div class = "dropDownList" id = "move">
+              </div>
+            </div>
+            <div id = "flipping">
+              <button onclick = "showPrevious()"><</button>
+              <button onclick = "showNext()">></button>
+            </div>
+    </div>
+    <div class="left wide">
+            <div id = "m">
+              <a id = "inbox" onclick = "showInbox()">Inbox<br></a>
+              <a id = "important" onclick = "showImportant()">Important<br></a>
+              <a id = "sent" onclick = "showSent()">Sent<br></a>
+              <a id = "trash" onclick = "showTrash()">Trash<br></a>
+            </div>
+            <div  id = "e">
+              Processing...
+            </div>
+    </div>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>
